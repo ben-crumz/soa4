@@ -12,11 +12,11 @@ targetElement.style.height = referenceElement.clientHeight + 'px';
 
 function openHamburgerMenu() {
     const hamburgerMenu = document.getElementById('hamburger-expanded');
-    hamburgerMenu.style.display = "block";
+    hamburgerMenu.style.width = "90%";
     console.log('Test');
 }
 function closeHamburgerMenu() {
     const hamburgerMenu = document.getElementById('hamburger-expanded');
-    hamburgerMenu.style.display = "block";
+    hamburgerMenu.style.width = "0%";
     console.log('Test');
 }
