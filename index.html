@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="utility.css">
+    <link rel="stylesheet" href="reset.css">
+
+</head>
+
+<body>
+    <nav>
+        <span class="nav-main" id="header-reference">
+            <h1 class="sr-only">SOA</h1>
+            <h2 class="header-container">
+                <hr aria-hidden="true" class="header-styling-hr">
+                <span class="header">Explore</span>
+                <hr aria-hidden="true" class="header-styling-hr">
+            </h2>
+            <div class="hamburger-open" onclick="openHamburgerMenu()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="17" viewBox="0 0 24 17" fill="none">
+                    <line y1="0.5" x2="24" y2="0.5" stroke="#120000" />
+                    <line y1="8.5" x2="24" y2="8.5" stroke="#120000" />
+                    <line y1="16.5" x2="24" y2="16.5" stroke="#120000" />
+                </svg>
+            </div>
+        </span>
+        <div id="hamburger-expanded">
+            <div class="hamburger-header">
+                <div class="hamburger-close" id="header-target" onclick="closeHamburgerMenu()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 30 30" fill="none">
+                        <line x1="1.35355" y1="0.646447" x2="29.6378" y2="28.9307" stroke="#120000" />
+                        <line x1="0.825646" y1="28.9882" x2="29.1099" y2="0.703973" stroke="#120000" />
+                    </svg>
+                </div>
+            </div>
+            <ul class="hamburger-list">
+                <li><a href="#" class="hamburger-link">Home</a></li>
+                <li><a href="#" class="hamburger-link">Contact</a></li>
+                <li><a href="#" class="hamburger-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+</body>
+<script src="main.js"></script>
+
+</html>

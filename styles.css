@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandiflora+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grandiflora+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Young+Serif&display=swap');
+
+:root {
+    --main-border-thickness: 2px;
+    --background-color: white;
+}
+
+.nav-main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: solid var(--main-border-thickness) black;
+}
+
+.header-container {
+    flex: 1;
+    position: relative;
+    padding-inline-start: 10%;
+    color: var(--Secondary-Color, #120000);
+    font-family: Manrope;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 1.25rem;
+    text-transform: uppercase;
+}
+
+.header-styling-hr {
+    display: inline-block;
+    vertical-align: middle;
+    border: none;
+    background-color: black;
+    height: 1px;
+    width: 15px;
+}
+
+.hamburger-open {
+    padding-block: 1rem;
+    height: 100%;
+    padding-inline: 1rem;
+    border-inline-start: solid var(--main-border-thickness) black;
+}
+
+.hamburger-open,
+.hamburger-open>svg {
+    cursor: pointer;
+}
+
+#hamburger-expanded {
+    /* display: none; */
+    position: absolute;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+    border-left: solid var(--main-border-thickness) black;
+    border-bottom: solid var(--main-border-thickness) black;
+    background-color: var(--background-color);
+
+    transition: width .4s ease-in-out;
+}
+
+.hamburger-header {
+    border-bottom: solid var(--main-border-thickness) black;
+}
+
+.hamburger-close {
+    width: fit-content;
+    margin-left: auto;
+    padding-inline: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    border-left: solid var(--main-border-thickness) black;
+}
+
+.hamburger-close,
+.hamburger-close>svg {
+    cursor: pointer;
+}
+
+.hamburger-list {
+    list-style: none;
+    padding-left: 1rem;
+    padding-block: 1rem;
+    display: grid;
+    row-gap: 1rem;
+    --text-affect-width: 95%;
+}
+
+.hamburger-link {
+    text-decoration: none;
+    color: var(--Secondary-Color, #120000);
+    font-family: Manrope;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 1.25rem;
+}
+
+.hamburger-link::before {
+    content: '';
+    position: relative;
+    left: calc(var(--text-affect-width) - 20px);
+    bottom: -18px;
+    display: block;
+    height: 1px;
+    width: 20px;
+    background-color: black;
+    transform: rotateZ(calc(180deg + 45deg));
+}
+
+.hamburger-link::after {
+    content: '';
+    position: relative;
+    left: -4px;
+    bottom: 2px;
+    display: block;
+    height: 1px;
+    width: var(--text-affect-width);
+    background-color: black;
+}
